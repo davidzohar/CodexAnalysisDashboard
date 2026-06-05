@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Codex Analysis</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <h1>Codex Analysis</h1>
+        <div id="sourceLine" class="source-line">Loading session index...</div>
+      </div>
+      <div class="header-actions">
+        <button id="refreshBtn" type="button">Refresh Index</button>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <section id="statusPanel" class="status-panel"></section>
+      <section id="metricGrid" class="metric-grid"></section>
+
+      <section class="filters" aria-label="Filters">
+        <label>
+          Text
+          <input id="textFilter" type="search" placeholder="session, path, command, message">
+        </label>
+        <label>
+          Thread
+          <select id="threadFilter"></select>
+        </label>
+        <label>
+          Workspace
+          <select id="cwdFilter"></select>
+        </label>
+        <label>
+          Repository
+          <select id="repoFilter"></select>
+        </label>
+        <label>
+          Model
+          <select id="modelFilter"></select>
+        </label>
+        <label>
+          Tool
+          <select id="toolFilter"></select>
+        </label>
+        <label>
+          From
+          <input id="dateFromFilter" type="date">
+        </label>
+        <label>
+          To
+          <input id="dateToFilter" type="date">
+        </label>
+        <label class="checkbox-label">
+          <input id="failureFilter" type="checkbox">
+          Failures
+        </label>
+      </section>
+
+      <nav id="useCaseNav" class="usecase-nav" aria-label="Views"></nav>
+
+      <section class="content-grid">
+        <aside id="facetPanel" class="facet-panel"></aside>
+        <section id="mainPanel" class="main-panel"></section>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "codex-analysis-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local browser dashboard for Codex JSONL session logs.",
+  "type": "module",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node server/server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
